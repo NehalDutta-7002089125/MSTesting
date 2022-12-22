@@ -17,6 +17,20 @@ namespace refactor_TC
 
 
         }
-       
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Program a = new Program("happy");
+            string expectedResult = "happy";
+            string actualResult = a.Analyse();
+
+            Assert.AreEqual(expectedResult, actualResult);
+
+
+
+        }
+
+
     }
 }
