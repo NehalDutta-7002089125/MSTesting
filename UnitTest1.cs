@@ -19,7 +19,18 @@ namespace MoodAnalyse
 
 
         }
-        
+        [TestMethod]
+
+        public void TestMethod2()
+        {
+            Program b = new Program();
+
+            string mood = b.Analyse("i happy");
+
+            Assert.AreEqual(mood, "i happy");
+
+
+        }
 
     }
 }
