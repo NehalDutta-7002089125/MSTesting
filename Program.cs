@@ -22,7 +22,7 @@ namespace Factor_TC
           
             else
             {
-                return "happy";
+                return "Happy";
             }
         }
         
