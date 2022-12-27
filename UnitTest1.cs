@@ -1,25 +1,36 @@
-using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using TC_uc_2;
+using MoodAnalyse;
 
-namespace TC_UC_2._1
+namespace MoodAnalyse
 {
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod6()
-        {
-            
-           // string expected = "happy";
-            mood moodAnalyser = new mood("null");
-            string expected = "happy";
-            string Actual = moodAnalyser.analyse();
+       
 
-            Assert.AreEqual(expected, Actual);
+        [TestMethod]
+        public void TestMethod1()
+        {
+            Program a = new Program();
+          
+              string mood =a.Analyse("sad");
+           
+            Assert.AreEqual(mood,"sad");
+
 
         }
+        [TestMethod]
+
+        public void TestMethod2()
+        {
+            Program b = new Program();
+
+            string mood = b.Analyse("i happy");
+
+            Assert.AreEqual(mood, "i happy");
+
+
+        }
+
     }
 }
